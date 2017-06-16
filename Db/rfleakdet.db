@@ -1,0 +1,24 @@
+record (stringout, "$(PREFIX):debug") {
+  field(DESC,"Debugging interface")
+  field(DTYP, "stream")
+  field(OUT,"@rfleakdet.proto debug $(RFDET_PORT)")
+}
+
+record (waveform, "$(PREFIX):debug-in") {
+  field(DESC,"Listen to all replies")
+  field(DTYP, "stream")
+  field(NELM, "130")
+  field(FTVL, "CHAR")
+  field(SCAN, "I/O Intr")
+  field(INP,"@rfleakdet.proto debugin $(RFDET_PORT)")
+}
+
+record (waveform, "$(PREFIX):RFdata-$(NODE)") {
+  field(DESC,"Listen to all replies")
+  field(DTYP, "stream")
+  field(SCAN, "10 second")
+  field(NELM, "10")
+  field(FTVL, "SHORT")
+  field(INP,"@rfleakdet.proto getRFdata($(NODE)) $(RFDET_PORT)")
+}
+

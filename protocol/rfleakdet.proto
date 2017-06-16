@@ -1,0 +1,53 @@
+Terminator = LF;
+ExtraInput=Ignore;
+
+getId {
+    @init {
+        out "R nid";
+        in "R nid %d";
+    }
+}
+
+isMaster {
+        out "R mst";
+        in "R mst %d";
+}
+
+setMaster {
+        out "W mst %d";
+	in "W mst %d";
+   @init { isMaster; }
+}
+
+getConfSelf {
+        out "R crs";
+	in "R crs %d";
+
+}
+getNofNodes {
+        out "R ncn";
+        in "R ncn %d";
+}
+
+getConnNodes { separator = " ";
+        out "R rci";
+        in "R rci %d";
+}
+
+
+getRFdata { separator = " ";
+        out "R rsd \$1";
+        in "R rsd \$1: %d";
+}
+
+# Connect a stringout record to this to get
+# a generic command interface.
+# After processing finishes, the record contains the reply.
+debug {
+ExtraInput = Ignore;
+out "%s"; in "%#s"
+}
+
+debugin {
+in "%#s"
+}

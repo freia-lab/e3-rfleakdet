@@ -1,0 +1,14 @@
+To use the module in an ioc add the following statements to your startup snipppet:
+
+require rfleakdet-freia,<version>
+epicsEnvSet("RFLEAKDET_PORT-1", "<YOUR-ASYN-PORT-1>")
+
+drvAsynIPPortConfigure(${RFLEAKDET_PORT-1}, <ip-addr:port>,0,0,0)
+
+## Load record instances
+dbLoadRecords("rfleakdet.db","RFDET_PORT=${RFLEAKDET_PORT-1},PREFIX='<pv-prefix>'")
+
+In FREIA the ps is connected to MOXA server "192.168.10.9:4002"
+
+The example BOY opi file is included in opi/helper-opi-files. Define macro P 
+to the same value as <pv-prefix> in your startup script.
