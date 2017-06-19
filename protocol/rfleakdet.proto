@@ -2,10 +2,14 @@ Terminator = LF;
 ExtraInput=Ignore;
 
 getId {
-    @init {
         out "R nid";
         in "R nid %d";
-    }
+}
+
+setId {
+        out "W nid %d";
+        in "W nid %d";
+    	@init { getId; }
 }
 
 isMaster {
@@ -32,6 +36,11 @@ getNofNodes {
 getConnNodes { separator = " ";
         out "R rci";
         in "R rci %d";
+}
+
+getAllowedNodes { separator = " ";
+        out "R ani";
+        in "R ani%d";
 }
 
 
