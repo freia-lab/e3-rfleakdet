@@ -33,6 +33,17 @@ getNofNodes {
         in "R ncn %d";
 }
 
+getAan {
+        out "R aan";
+        in "R aan %d";
+}
+
+setAllowAllNodes {
+        out "W aan %d";
+        in "W aan %d";
+   @init { getAan; }
+}
+
 getConnNodes { separator = " ";
         out "R rci";
         in "R rci %d";
@@ -49,6 +60,47 @@ getRFdata { separator = " ";
         in "R rsd \$1: %d";
 }
 
+getStatus {
+    out "R cnf";
+    in "R cnf";
+}
+
+## Write Only commands
+
+applyConfigBuf {
+    out "W acs";
+    in "W acs";
+}
+
+reboot {
+    out "W rbt";
+}
+
+reset {
+    out "W rst";
+    in "W rst";
+}
+
+resetNetwork {
+    out "W rsn";
+    in "W rsn";
+}
+
+savConf {
+    out "W scf";
+    in "W scf";
+}
+
+rmAllowedNode {
+    out "W rai %d";
+    in "W rai %d";
+}
+
+addAllowedNode {
+    out "W aai %d";
+    in "W aai %d";
+}
+
 # Connect a stringout record to this to get
 # a generic command interface.
 # After processing finishes, the record contains the reply.
@@ -60,3 +112,4 @@ out "%s"; in "%#s"
 debugin {
 in "%#s"
 }
+
