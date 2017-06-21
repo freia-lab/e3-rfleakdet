@@ -4,6 +4,7 @@ ExtraInput=Ignore;
 getId {
         out "R nid";
         in "R nid %d";
+	@init { out "R nid"; in "R nid %d"; }
 }
 
 setId {
@@ -12,9 +13,46 @@ setId {
     	@init { getId; }
 }
 
+getAdr {
+        out "R adr";
+        in "R adr %d";
+	@init { out "R adr"; in "R adr %d"; }
+}
+
+setAdr {
+        out "W adr %d";
+        in "W adr %d";
+    	@init { getAdr; }
+}
+
+getConfBuf {
+        out "R \$1";
+        in "R \$1 %d";
+	@init {  out "R \$1";  in "R \$1 %d"; }
+}
+
+setConfBuf {
+        out "W \$1 %d";
+        in "W \$1 %d";
+    	@init { getConfBuf; }
+}
+
+getCalibrFreq {
+        out "R sf\$1";
+        in "R sf\$1 %d";
+	@init {  out "R sf\$1";  in "R sf\$1 %d"; }
+}
+
+setCalibrFreq {
+        out "W sf\$1 %d";
+        in "W sf\$1 %d";
+    	@init { getCalibrFreq; }
+}
+
 isMaster {
         out "R mst";
         in "R mst %d";
+	@init { out "R mst"; in "R mst %d"; }
 }
 
 setMaster {
@@ -26,8 +64,10 @@ setMaster {
 getConfSelf {
         out "R crs";
 	in "R crs %d";
+  	 @init {out "R crs"; in "R crs %d"; }
 
 }
+
 getNofNodes {
         out "R ncn";
         in "R ncn %d";
@@ -47,11 +87,13 @@ setAllowAllNodes {
 getConnNodes { separator = " ";
         out "R rci";
         in "R rci %d";
+   	@init { out "R rci"; in "R rci %d"; }
 }
 
 getAllowedNodes { separator = " ";
         out "R ani";
-        in "R ani%d";
+        in "R ani %d";
+   	@init { out "R ani"; in "R ani %d"; }
 }
 
 
@@ -64,6 +106,7 @@ getStatus {
     out "R cnf";
     in "R cnf";
 }
+
 
 ## Write Only commands
 

@@ -16,7 +16,6 @@ record (waveform, "$(PREFIX):debug-in") {
 record (waveform, "$(PREFIX):Config") {
   field(DESC,"Read configuration")
   field(DTYP, "stream")
-  field(SCAN, "10 second")
   field(NELM, "16")
   field(FTVL, "SHORT")
   field(INP,"@rfleakdet.proto getConfSelf $(RFDET_PORT)")
@@ -25,7 +24,6 @@ record (waveform, "$(PREFIX):Config") {
 record (waveform, "$(PREFIX):Nodes-Conn:sIDs") {
   field(DESC,"Read connected nodes IDs")
   field(DTYP, "stream")
-  field(SCAN, "10 second")
   field(NELM, "16")
   field(FTVL, "SHORT")
   field(INP,"@rfleakdet.proto getConnNodes $(RFDET_PORT)")
@@ -34,7 +32,6 @@ record (waveform, "$(PREFIX):Nodes-Conn:sIDs") {
 record (waveform, "$(PREFIX):Nodes-sAllowed:sIDs") {
   field(DESC,"Read Allowed nodes IDs")
   field(DTYP, "stream")
-  field(SCAN, "10 second")
   field(NELM, "32")
   field(FTVL, "SHORT")
   field(INP,"@rfleakdet.proto getAllowedNodes $(RFDET_PORT)")
@@ -64,7 +61,7 @@ record (bo, "$(PREFIX):Master:cmdAllowAll") {
 record (longin, "$(PREFIX):Master:sN-conn") {
   field(DESC,"Number of connected nodes")
   field(DTYP, "stream")
-  field(SCAN, "10 second")
+  field(SCAN, "1 second")
   field(INP,"@rfleakdet.proto getNofNodes $(RFDET_PORT)")
 }
 
@@ -83,13 +80,281 @@ record (longout, "$(PREFIX):Node:cId") {
   field(FLNK, "$(PREFIX):Node:sId")
 }
 
+# Node Configuration PVs
+
+record (longin, "$(PREFIX):Node:sAdr") {
+  field(DESC,"Node's RF network address readback")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getAdr $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Node:cAdr") {
+  field(DESC,"Node's RF network address")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setAdr $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Node:sAdr")
+}
+
+record (ai, "$(PREFIX):Config:sSamplRt") {
+  field(DESC,"RF data sampling rate readback")
+  field(EGU, "Hz")
+  field(LINR, "SLOPE")
+  field(ASLO, "10")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(smp) $(RFDET_PORT)")
+}
+
+record (ao, "$(PREFIX):Config:cSamplRt") {
+  field(DESC,"RF data sampling rate")
+  field(EGU, "Hz")
+  field(LINR, "SLOPE")
+  field(ASLO, "10")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(smp) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sSamplRt")
+}
+
+record (ai, "$(PREFIX):Config:sTxPeriod") {
+  field(DESC,"Transmit period readback")
+  field(EGU, "s")
+  field(LINR, "SLOPE")
+  field(ASLO, "0.1")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(txt) $(RFDET_PORT)")
+}
+
+record (ao, "$(PREFIX):Config:cTxPeriod") {
+  field(DESC,"Transmit period")
+  field(EGU, "s")
+  field(LINR, "SLOPE")
+  field(ASLO, "0.1")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(txt) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sTxPeriod")
+}
+
+record (longin, "$(PREFIX):Config:sPeakAlrm-1") {
+  field(DESC,"Chan 1: Peak Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a1p) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cPeakAlrm-1") {
+  field(DESC,"Chan 1: Peak Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a1p) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sPeakAlrm-1")
+}
+
+record (longin, "$(PREFIX):Config:sPeakAlrm-2") {
+  field(DESC,"Chan 2: Peak Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a2p) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cPeakAlrm-2") {
+  field(DESC,"Chan 2: Peak Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a2p) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sPeakAlrm-2")
+}
+
+record (longin, "$(PREFIX):Config:sPeakAlrm-3") {
+  field(DESC,"Chan 3: Peak Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a3p) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cPeakAlrm-3") {
+  field(DESC,"Chan 3: Peak Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a3p) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sPeakAlrm-3")
+}
+
+record (longin, "$(PREFIX):Config:sAvgAlrm-1") {
+  field(DESC,"Chan 1: Avg Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a1a) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cAvgAlrm-1") {
+  field(DESC,"Chan 1: Avg Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a1a) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAvgAlrm-1")
+}
+
+record (longin, "$(PREFIX):Config:sAvgAlrm-2") {
+  field(DESC,"Chan 2: Avg Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a2a) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cAvgAlrm-2") {
+  field(DESC,"Chan 2: Avg Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a2a) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAvgAlrm-2")
+}
+
+record (longin, "$(PREFIX):Config:sAvgAlrm-3") {
+  field(DESC,"Chan 3: Avg Alarm Lvl Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(a3a) $(RFDET_PORT)")
+}
+
+record (longin, "$(PREFIX):Config:sAmplCalibr-1") {
+  field(DESC,"Chan 1: Amplitude calibration Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(r1c) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cAmplCalibr-1") {
+  field(DESC,"Chan 1: Amplitude calibration")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(r1c) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAmplCalibr-1")
+}
+
+record (longin, "$(PREFIX):Config:sAmplCalibr-2") {
+  field(DESC,"Chan 2: Amplitude calibration Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(r2c) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cAmplCalibr-2") {
+  field(DESC,"Chan 2: Amplitude calibration")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(r2c) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAmplCalibr-2")
+}
+
+record (longin, "$(PREFIX):Config:sAmplCalibr-3") {
+  field(DESC,"Chan 3: Amplitude calibration Readback")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getConfBuf(r3c) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cAmplCalibr-3") {
+  field(DESC,"Chan 3: Amplitude calibration")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(r3c) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAmplCalibr-3")
+}
+
+record (longout, "$(PREFIX):Config:cAvgAlrm-3") {
+  field(DESC,"Chan 3: Avg Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a3a) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAvgAlrm-3")
+}
+
+record (longin, "$(PREFIX):Config:sCalibrFreq-1") {
+  field(DESC,"Chan 1: Calibration Frequency Readback")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getCalibrFreq(1) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cCalibrFreq-1") {
+  field(DESC,"Chan 1: Calibration Frequency")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setCalibrFreq(1) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sCalibrFreq-1")
+}
+
+record (longin, "$(PREFIX):Config:sCalibrFreq-2") {
+  field(DESC,"Chan 2: Calibration Frequency Readback")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getCalibrFreq(2) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cCalibrFreq-2") {
+  field(DESC,"Chan 2: Calibration Frequency")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setCalibrFreq(2) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sCalibrFreq-2")
+}
+
+record (longin, "$(PREFIX):Config:sCalibrFreq-3") {
+  field(DESC,"Chan 3: Calibration Frequency Readback")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP,"@rfleakdet.proto getCalibrFreq(3) $(RFDET_PORT)")
+}
+
+record (longout, "$(PREFIX):Config:cCalibrFreq-3") {
+  field(DESC,"Chan 3: Calibration Frequency")
+  field(EGU, "MHz")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setCalibrFreq(3) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sCalibrFreq-3")
+}
+
+# Configuration status
+
 record (mbbiDirect, "$(PREFIX):Config:Status") {
   field(DESC,"Configuration status")
   field(NOBT, 8)
   field(DTYP, "stream")
-  field(SCAN, "10 second")
+  field(SCAN, "1 second")
   field(INP,"@rfleakdet.proto getStatus $(RFDET_PORT)")
 }
+
 
 # Commands
 
@@ -114,7 +379,7 @@ record (bo, "$(PREFIX):Config:Reset") {
 record (bo, "$(PREFIX):Config:RstNet") {
   field(DESC,"Reset network")
   field(DTYP, "stream")
-  field(OUT,"@rfleakdet.proto reset $(RFDET_PORT)")
+  field(OUT,"@rfleakdet.proto resetNetwork $(RFDET_PORT)")
 }
 
 record (bo, "$(PREFIX):Config:SavInFlash") {
@@ -138,3 +403,12 @@ record (longout, "$(PREFIX):Config:RmAllowedId") {
   field(OUT,"@rfleakdet.proto rmAllowedNode $(RFDET_PORT)")
   field(FLNK, "$(PREFIX):Nodes-sAllowed:sIDs")
 }
+
+# Help pvs
+record (fanout, "$(PREFIX):Config:Refresh") {
+  field(DESC,"Uppdate all read data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK1,"$(PREFIX):Mode:sMaster")
+ }
+

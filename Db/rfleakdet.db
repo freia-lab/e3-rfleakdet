@@ -1,7 +1,7 @@
 record (waveform, "$(PREFIX):RFdata-$(NODE)") {
   field(DESC,"Listen to all replies")
   field(DTYP, "stream")
-  field(SCAN, "10 second")
+  field(SCAN, "1 second")
   field(NELM, "10")
   field(FTVL, "SHORT")
   field(INP,"@rfleakdet.proto getRFdata($(NODE)) $(RFDET_PORT)")
