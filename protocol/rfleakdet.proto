@@ -102,9 +102,9 @@ getRFdata { separator = " ";
         in "R rsd \$1: %d";
 }
 
-getStatus {
-    out "R cnf";
-    in "R cnf";
+getRFdataSelf { separator = " ";
+        out "R rsd";
+        in "R rsd %*d: %d";
 }
 
 

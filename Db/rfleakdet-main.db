@@ -13,6 +13,15 @@ record (waveform, "$(PREFIX):debug-in") {
   field(INP,"@rfleakdet.proto debugin $(RFDET_PORT)")
 }
 
+record (waveform, "$(PREFIX):RFdata") {
+  field(DESC,"RF data of node connected to serial.")
+  field(DTYP, "stream")
+  field(SCAN, "1 second")
+  field(NELM, "10")
+  field(FTVL, "SHORT")
+  field(INP,"@rfleakdet.proto getRFdataSelf $(RFDET_PORT)")
+}
+
 record (waveform, "$(PREFIX):Config") {
   field(DESC,"Read configuration")
   field(DTYP, "stream")
@@ -226,6 +235,15 @@ record (longout, "$(PREFIX):Config:cAvgAlrm-2") {
   field(FLNK, "$(PREFIX):Config:sAvgAlrm-2")
 }
 
+record (longout, "$(PREFIX):Config:cAvgAlrm-3") {
+  field(DESC,"Chan 3: Avg Alarm Lvl")
+  field(EGU, "dBm")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,"@rfleakdet.proto setConfBuf(a3a) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sAvgAlrm-3")
+}
+
 record (longin, "$(PREFIX):Config:sAvgAlrm-3") {
   field(DESC,"Chan 3: Avg Alarm Lvl Readback")
   field(EGU, "dBm")
@@ -285,15 +303,6 @@ record (longout, "$(PREFIX):Config:cAmplCalibr-3") {
   field(FLNK, "$(PREFIX):Config:sAmplCalibr-3")
 }
 
-record (longout, "$(PREFIX):Config:cAvgAlrm-3") {
-  field(DESC,"Chan 3: Avg Alarm Lvl")
-  field(EGU, "dBm")
-  field(DTYP, "stream")
-  field(SCAN, "Passive")
-  field(OUT,"@rfleakdet.proto setConfBuf(a3a) $(RFDET_PORT)")
-  field(FLNK, "$(PREFIX):Config:sAvgAlrm-3")
-}
-
 record (longin, "$(PREFIX):Config:sCalibrFreq-1") {
   field(DESC,"Chan 1: Calibration Frequency Readback")
   field(EGU, "MHz")
@@ -345,14 +354,19 @@ record (longout, "$(PREFIX):Config:cCalibrFreq-3") {
   field(FLNK, "$(PREFIX):Config:sCalibrFreq-3")
 }
 
-# Configuration status
-
-record (mbbiDirect, "$(PREFIX):Config:Status") {
-  field(DESC,"Configuration status")
+record (mbbiDirect, "$(PREFIX):Config:sFlags") {
+  field(DESC,"Configuration flags readback")
   field(NOBT, 8)
   field(DTYP, "stream")
-  field(SCAN, "1 second")
-  field(INP,"@rfleakdet.proto getStatus $(RFDET_PORT)")
+  field(INP,"@rfleakdet.proto getConfBuf(cnf) $(RFDET_PORT)")
+}
+
+record (mbboDirect, "$(PREFIX):Config:cFlags") {
+  field(DESC,"Configuration flags")
+  field(NOBT, 8)
+  field(DTYP, "stream")
+  field(OUT,"@rfleakdet.proto setConfBuf(cnf) $(RFDET_PORT)")
+  field(FLNK, "$(PREFIX):Config:sFlags")
 }
 
 
@@ -409,6 +423,55 @@ record (fanout, "$(PREFIX):Config:Refresh") {
   field(DESC,"Uppdate all read data")
   field(SCAN, "Passive")
   field(SELM, "All")
-  field(LNK1,"$(PREFIX):Mode:sMaster")
+  field(LNK1,"$(PREFIX):Config:Refresh-1")
+  field(LNK2,"$(PREFIX):Config:Refresh-2")
+  field(LNK3,"$(PREFIX):Config:Refresh-3")
+  field(LNK4,"$(PREFIX):Config:Refresh-4")
+ }
+
+record (fanout, "$(PREFIX):Config:Refresh-1") {
+  field(DESC,"Uppdate all read data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK1,"$(PREFIX):Config")
+  field(LNK2,"$(PREFIX):Nodes-Conn:sIDs")
+  field(LNK3,"$(PREFIX):Nodes-sAllowed:sIDs")
+  field(LNK4,"$(PREFIX):Mode:sMaster")
+  field(LNK5,"$(PREFIX):Master:sN-conn")
+  field(LNK6,"$(PREFIX):Node:sId")
+ }
+
+record (fanout, "$(PREFIX):Config:Refresh-2") {
+  field(DESC,"Uppdate all read data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK1,"$(PREFIX):Node:sAdr")
+  field(LNK2,"$(PREFIX):Config:sSamplRt")
+  field(LNK3,"$(PREFIX):Config:sTxPeriod")
+  field(LNK4,"$(PREFIX):Config:sPeakAlrm-1")
+  field(LNK5,"$(PREFIX):Config:sPeakAlrm-2")
+  field(LNK6,"$(PREFIX):Config:sPeakAlrm-3")
+ }
+
+record (fanout, "$(PREFIX):Config:Refresh-3") {
+  field(DESC,"Uppdate all read data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK1,"$(PREFIX):Config:sAvgAlrm-1")
+  field(LNK2,"$(PREFIX):Config:sAvgAlrm-2")
+  field(LNK3,"$(PREFIX):Config:sAvgAlrm-3")
+  field(LNK4,"$(PREFIX):Config:sAmplCalibr-1")
+  field(LNK5,"$(PREFIX):Config:sAmplCalibr-2")
+  field(LNK6,"$(PREFIX):Config:sAmplCalibr-3")
+ }
+
+record (fanout, "$(PREFIX):Config:Refresh-4") {
+  field(DESC,"Uppdate all read data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK1,"$(PREFIX):Config:sCalibrFreq-1")
+  field(LNK2,"$(PREFIX):Config:sCalibrFreq-2")
+  field(LNK3,"$(PREFIX):Config:sCalibrFreq-3")
+  field(LNK4,"$(PREFIX):Config:sFlags")
  }
 
