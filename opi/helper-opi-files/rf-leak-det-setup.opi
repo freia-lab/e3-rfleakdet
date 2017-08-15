@@ -10,7 +10,7 @@
   <background_color>
     <color red="188" green="188" blue="188" />
   </background_color>
-  <boy_version>5.1.0.201703221304</boy_version>
+  <boy_version>5.1.0.201708071144</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -2666,7 +2666,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>132</width>
+      <width>130</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-1633</wuid>
       <x>1</x>
@@ -2815,7 +2815,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>124</width>
+      <width>122</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-156c</wuid>
       <x>1</x>
@@ -2964,7 +2964,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>135</width>
+      <width>133</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-1555</wuid>
       <x>0</x>
@@ -3155,7 +3155,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>132</width>
+      <width>130</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-14c6</wuid>
       <x>1</x>
@@ -3304,7 +3304,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>124</width>
+      <width>122</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-14c3</wuid>
       <x>1</x>
@@ -3453,7 +3453,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>135</width>
+      <width>133</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-12c9</wuid>
       <x>1</x>
@@ -3644,7 +3644,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>132</width>
+      <width>130</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-14a6</wuid>
       <x>1</x>
@@ -3793,7 +3793,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>124</width>
+      <width>122</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-14a3</wuid>
       <x>1</x>
@@ -3942,7 +3942,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>135</width>
+      <width>133</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-12aa</wuid>
       <x>1</x>
@@ -4024,7 +4024,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>130</width>
+      <width>128</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-14c0</wuid>
       <x>0</x>
@@ -4215,7 +4215,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>130</width>
+      <width>128</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-11d7</wuid>
       <x>0</x>
@@ -4406,7 +4406,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>130</width>
+      <width>128</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-11c3</wuid>
       <x>0</x>
@@ -4745,7 +4745,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>116</width>
+      <width>115</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-ebf</wuid>
       <x>0</x>
@@ -4935,7 +4935,7 @@ $(pv_value)</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>77</width>
+      <width>75</width>
       <wrap_words>false</wrap_words>
       <wuid>-663604d0:15cc97619e9:-ea1</wuid>
       <x>0</x>
@@ -5839,5 +5839,62 @@ $(pv_value)</tooltip>
     <wuid>-4817cad2:15cce9d9b70:-7cf3</wuid>
     <x>372</x>
     <y>337</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="true">
+      <action type="OPEN_DISPLAY">
+        <path>/CSS/installed_modules/asyn/4.31.0/opi/asynRecord.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <P></P>
+          <R>asynRec</R>
+        </macros>
+        <mode>8</mode>
+        <description></description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>40</height>
+    <image></image>
+    <name>Action Button_5</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>0</style>
+    <text>asynRec</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>135</width>
+    <wuid>-7685efb1:15de0252c70:-73e9</wuid>
+    <x>726</x>
+    <y>531</y>
   </widget>
 </display>

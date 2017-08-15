@@ -42,6 +42,7 @@ record (ai, "$(PREFIX):RFdata-$(NODE):RFPEAK1") {
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
+   field (EGU, "dBm")
 }
 
 record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFAVG1") {
@@ -180,16 +181,20 @@ record (subArray, "$(PREFIX):RFdata-$(NODE):tmpBATT") {
 }
 record (ai, "$(PREFIX):RFdata-$(NODE):BATT") {
    field(INP, "$(PREFIX):RFdata-$(NODE):tmpBATT NPP MS")
+   field(DTYP, "Raw Soft Channel")
    field (LOPR, "0.0")
-   field (HOPR, "100.0")
-   field (PREC, "0")
+   field (HOPR, "5.0")
+   field (EGU, "V")
+   field (PREC, "1")
+   field (LINR, "SLOPE")
+   field (ESLO, "0.1")
 }
 
 record (subArray, "$(PREFIX):RFdata-$(NODE):VALID") {
    field (DESC, "Data valid")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdata-$(NODE) MSS")
    field (FTVL, "USHORT")
    field (INDX, "8")
    field (LOPR, "0")
@@ -200,7 +205,7 @@ record (subArray, "$(PREFIX):RFdata-$(NODE):VALID") {
 }
 record (mbbi, "$(PREFIX):RFdata-$(NODE):SEV") {
    field (DESC, "PV to propagate the severity")
-   field (INP, "$(PREFIX):RFdata-$(NODE):VALID")
+   field (INP, "$(PREFIX):RFdata-$(NODE):VALID MSS")
    field(VAL, "0")
    field(ZRVL, "0")
    field(ZRST, "INVALID")
