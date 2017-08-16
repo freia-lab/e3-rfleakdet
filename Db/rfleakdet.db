@@ -146,7 +146,6 @@ record (ai, "$(PREFIX):RFdata-$(NODE):RFAVG3") {
 }
 
 record (subArray, "$(PREFIX):RFdata-$(NODE):tmpALRM") {
-   field (DESC, "Alarm indicator")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
    field (INP, "$(PREFIX):RFdata-$(NODE)")
@@ -160,8 +159,13 @@ record (subArray, "$(PREFIX):RFdata-$(NODE):tmpALRM") {
    field(DISV, "-1") # Will never disable, but will propagate severity
    field (FLNK, "$(PREFIX):RFdata-$(NODE):ALRM")
 }
-record (longin, "$(PREFIX):RFdata-$(NODE):ALRM") {
+record (bi, "$(PREFIX):RFdata-$(NODE):ALRM") {
+   field (DESC, "Alarm indicator")
    field(INP, "$(PREFIX):RFdata-$(NODE):tmpALRM NPP MS")
+   field(ZNAM, "ALARM OFF")
+   field(ZSV, "NO_ALARM")
+   field(ONAM, "ALARM ON")
+   field(OSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdata-$(NODE):tmpBATT") {
