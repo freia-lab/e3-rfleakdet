@@ -1,190 +1,190 @@
-record (waveform, "$(PREFIX):RFdata-$(NODE)") {
+record (waveform, "$(PREFIX):RFdet-$(NODE)") {
   field(DESC,"Listen to all replies")
   field(DTYP, "stream")
   field(SCAN, "1 second")
   field(NELM, "10")
   field(FTVL, "SHORT")
   field(INP,"@rfleakdet.proto getRFdata($(NODE)) $(RFDET_PORT)")
-  field (FLNK, "$(PREFIX):RFdata-$(NODE):FAN1")
+  field (FLNK, "$(PREFIX):RFdet-$(NODE):FAN1")
 }
 
 # Extract data from the waveform
 
-record (fanout, "$(PREFIX):RFdata-$(NODE):FAN1") {
+record (fanout, "$(PREFIX):RFdet-$(NODE):FAN1") {
   field(DESC,"Extract all read data")
   field(SCAN, "Passive")
   field(SELM, "All")
-  field(LNK0,"$(PREFIX):RFdata-$(NODE):VALID")
-  field(LNK1,"$(PREFIX):RFdata-$(NODE):tmpRFPEAK1")
-  field(LNK2,"$(PREFIX):RFdata-$(NODE):tmpRFAVG1")
-  field(LNK3,"$(PREFIX):RFdata-$(NODE):tmpRFPEAK2")
-  field(LNK4,"$(PREFIX):RFdata-$(NODE):tmpRFAVG2")
-  field(LNK5,"$(PREFIX):RFdata-$(NODE):tmpRFPEAK3")
-  field(LNK6,"$(PREFIX):RFdata-$(NODE):tmpRFAVG3")
-  field(LNK7,"$(PREFIX):RFdata-$(NODE):tmpALRM")
-  field(LNK8,"$(PREFIX):RFdata-$(NODE):tmpBATT")
+  field(LNK0,"$(PREFIX):RFdet-$(NODE):VALID")
+  field(LNK1,"$(PREFIX):RFdet-$(NODE):tmpRFPEAK1")
+  field(LNK2,"$(PREFIX):RFdet-$(NODE):tmpRFAVG1")
+  field(LNK3,"$(PREFIX):RFdet-$(NODE):tmpRFPEAK2")
+  field(LNK4,"$(PREFIX):RFdet-$(NODE):tmpRFAVG2")
+  field(LNK5,"$(PREFIX):RFdet-$(NODE):tmpRFPEAK3")
+  field(LNK6,"$(PREFIX):RFdet-$(NODE):tmpRFAVG3")
+  field(LNK7,"$(PREFIX):RFdet-$(NODE):tmpALRM")
+  field(LNK8,"$(PREFIX):RFdet-$(NODE):tmpBATT")
  }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK1") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK1") {
    field (DESC, "Peak power channel 1")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "0")
    field (MALM,"9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFPEAK1")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFPEAK1")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFPEAK1") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK1 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK1") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK1 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFAVG1") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG1") {
    field (DESC, "Average power channel 1")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "1")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFAVG1")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFAVG1")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFAVG1") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFAVG1 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG1") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG1 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK2") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK2") {
    field (DESC, "Peak power channel 2")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "2")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFPEAK2")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFPEAK2")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFPEAK2") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK2 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK2") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK2 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFAVG2") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG2") {
    field (DESC, "Average power channel 2")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "3")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFAVG2")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFAVG2")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFAVG2") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFAVG2 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG2") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG2 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK3") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK3") {
    field (DESC, "Peak power channel 3")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "4")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFPEAK3")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFPEAK3")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFPEAK3") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFPEAK3 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK3") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK3 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpRFAVG3") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG3") {
    field (DESC, "Average power channel 3")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "SHORT")
    field (INDX, "5")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):RFAVG3")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):RFAVG3")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):RFAVG3") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpRFAVG3 NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG3") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG3 NPP MS")
    field (LOPR, "-30.0")
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpALRM") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpALRM") {
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "USHORT")
    field (INDX, "6")
    field (LOPR, "0")
    field (HOPR, "0xffff")
    field (PREC, "0")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):ALRM")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):ALRM")
 }
-record (bi, "$(PREFIX):RFdata-$(NODE):ALRM") {
+record (bi, "$(PREFIX):RFdet-$(NODE):ALRM") {
    field (DESC, "Alarm indicator")
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpALRM NPP MS")
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpALRM NPP MS")
    field(ZNAM, "ALARM OFF")
    field(ZSV, "NO_ALARM")
    field(ONAM, "ALARM ON")
    field(OSV, "MAJOR")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):tmpBATT") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):tmpBATT") {
    field (DESC, "Battery status")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE)")
+   field (INP, "$(PREFIX):RFdet-$(NODE)")
    field (FTVL, "USHORT")
    field (INDX, "7")
    field (LOPR, "0")
    field (HOPR, "0xffff")
    field (PREC, "0")
    field (MALM, "9")
-   field(SDIS, "$(PREFIX):RFdata-$(NODE):SEV.VAL NPP MS")
+   field(SDIS, "$(PREFIX):RFdet-$(NODE):SEV.VAL NPP MS")
    field(DISV, "-1") # Will never disable, but will propagate severity
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):BATT")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):BATT")
 }
-record (ai, "$(PREFIX):RFdata-$(NODE):BATT") {
-   field(INP, "$(PREFIX):RFdata-$(NODE):tmpBATT NPP MS")
+record (ai, "$(PREFIX):RFdet-$(NODE):BATT") {
+   field(INP, "$(PREFIX):RFdet-$(NODE):tmpBATT NPP MS")
    field(DTYP, "Raw Soft Channel")
    field (LOPR, "0.0")
    field (HOPR, "5.0")
@@ -194,22 +194,22 @@ record (ai, "$(PREFIX):RFdata-$(NODE):BATT") {
    field (ESLO, "0.1")
 }
 
-record (subArray, "$(PREFIX):RFdata-$(NODE):VALID") {
+record (subArray, "$(PREFIX):RFdet-$(NODE):VALID") {
    field (DESC, "Data valid")
    field (DTYP, "Soft Channel")
    field (SCAN, "Passive")
-   field (INP, "$(PREFIX):RFdata-$(NODE) MSS")
+   field (INP, "$(PREFIX):RFdet-$(NODE) MSS")
    field (FTVL, "USHORT")
    field (INDX, "8")
    field (LOPR, "0")
    field (HOPR, "1")
    field (PREC, "0")
    field (MALM, "9")
-   field (FLNK, "$(PREFIX):RFdata-$(NODE):SEV")
+   field (FLNK, "$(PREFIX):RFdet-$(NODE):SEV")
 }
-record (mbbi, "$(PREFIX):RFdata-$(NODE):SEV") {
+record (mbbi, "$(PREFIX):RFdet-$(NODE):SEV") {
    field (DESC, "PV to propagate the severity")
-   field (INP, "$(PREFIX):RFdata-$(NODE):VALID MSS")
+   field (INP, "$(PREFIX):RFdet-$(NODE):VALID MSS")
    field(VAL, "0")
    field(ZRVL, "0")
    field(ZRST, "INVALID")
