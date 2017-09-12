@@ -43,6 +43,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK1") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "0")
+   field (HIHI, "10")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG1") {
@@ -63,6 +67,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG1") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "-6")
+   field (HIHI, "4")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK2") {
@@ -83,6 +91,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK2") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "0")
+   field (HIHI, "10")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG2") {
@@ -103,6 +115,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG2") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "-6")
+   field (HIHI, "4")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK3") {
@@ -123,6 +139,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK3") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "0")
+   field (HIHI, "10")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG3") {
@@ -143,6 +163,10 @@ record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG3") {
    field (HOPR, "40.0")
    field (PREC, "0")
    field (EGU, "dBm")
+   field (HIGH, "-6")
+   field (HIHI, "4")
+   field (HSV, "MINOR")
+   field (HHSV, "MAJOR")
 }
 
 record (subArray, "$(PREFIX):RFdet-$(NODE):tmpALRM") {
