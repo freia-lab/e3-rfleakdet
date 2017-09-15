@@ -358,6 +358,7 @@ record (mbbiDirect, "$(PREFIX):Config:sFlags") {
   field(DESC,"Configuration flags readback")
   field(NOBT, 8)
   field(DTYP, "stream")
+  field(SCAN, "1 second")
   field(INP,"@rfleakdet.proto getConfBuf(cnf) $(RFDET_PORT)")
 }
 
@@ -366,7 +367,7 @@ record (mbboDirect, "$(PREFIX):Config:cFlags") {
   field(NOBT, 8)
   field(DTYP, "stream")
   field(OUT,"@rfleakdet.proto setConfBuf(cnf) $(RFDET_PORT)")
-  field(FLNK, "$(PREFIX):Config:sFlags")
+#  field(FLNK, "$(PREFIX):Config:sFlags")
 }
 
 
@@ -472,6 +473,6 @@ record (fanout, "$(PREFIX):Config:Refresh-4") {
   field(LNK1,"$(PREFIX):Config:sCalibrFreq-1")
   field(LNK2,"$(PREFIX):Config:sCalibrFreq-2")
   field(LNK3,"$(PREFIX):Config:sCalibrFreq-3")
-  field(LNK4,"$(PREFIX):Config:sFlags")
+ # field(LNK4,"$(PREFIX):Config:sFlags")
  }
 
