@@ -61,7 +61,7 @@
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
     <scripts />
-    <text>FREIA RF Leak Detectors Network</text>
+    <text>FREIA RF Leakage Detectors Network</text>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
@@ -204,13 +204,13 @@
           <color red="192" green="192" blue="192" />
         </foreground_color>
         <group_name></group_name>
-        <height>440</height>
+        <height>593</height>
         <macros>
           <include_parent_macros>true</include_parent_macros>
         </macros>
         <name>Linking Container</name>
         <opi_file>helper-opi-files/rf-leak-det.opi</opi_file>
-        <resize_behaviour>0</resize_behaviour>
+        <resize_behaviour>2</resize_behaviour>
         <rules />
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -223,7 +223,7 @@
         <widget_type>Linking Container</widget_type>
         <width>787</width>
         <wuid>-19a6d8fc:15de64a2331:-6ec2</wuid>
-        <x>6</x>
+        <x>18</x>
         <y>6</y>
       </widget>
     </widget>

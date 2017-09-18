@@ -28,7 +28,7 @@
   <show_ruler>true</show_ruler>
   <snap_to_geometry>true</snap_to_geometry>
   <widget_type>Display</widget_type>
-  <width>800</width>
+  <width>850</width>
   <wuid>-2ce2c81d:15dd17661e4:-7e67</wuid>
   <x>-1</x>
   <y>-1</y>
@@ -50,7 +50,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>0</NODE>
@@ -58,7 +58,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -69,7 +69,7 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-74112590:15ddf918804:-7d4b</wuid>
     <x>12</x>
     <y>90</y>
@@ -92,7 +92,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>1</NODE>
@@ -100,7 +100,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -111,10 +111,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-74112590:15ddf918804:-7ce3</wuid>
     <x>12</x>
-    <y>180</y>
+    <y>198</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -134,7 +134,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>2</NODE>
@@ -142,7 +142,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -153,10 +153,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-74112590:15ddf918804:-7cd2</wuid>
     <x>12</x>
-    <y>270</y>
+    <y>306</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -176,7 +176,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>3</NODE>
@@ -184,7 +184,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -195,10 +195,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-74112590:15ddf918804:-7cc1</wuid>
     <x>12</x>
-    <y>360</y>
+    <y>414</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -218,7 +218,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>2</NODE>
@@ -226,7 +226,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -237,10 +237,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7f9b</wuid>
-    <x>240</x>
-    <y>270</y>
+    <x>291</x>
+    <y>306</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -260,7 +260,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>0</NODE>
@@ -268,7 +268,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -279,9 +279,9 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7f8c</wuid>
-    <x>240</x>
+    <x>291</x>
     <y>90</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
@@ -302,7 +302,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>1</NODE>
@@ -310,7 +310,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -321,10 +321,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7f7e</wuid>
-    <x>240</x>
-    <y>180</y>
+    <x>291</x>
+    <y>198</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -344,7 +344,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>3</NODE>
@@ -352,7 +352,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -363,10 +363,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7f71</wuid>
-    <x>240</x>
-    <y>360</y>
+    <x>291</x>
+    <y>414</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -386,7 +386,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>2</NODE>
@@ -394,7 +394,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -405,10 +405,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7cec</wuid>
-    <x>462</x>
-    <y>270</y>
+    <x>570</x>
+    <y>306</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -428,7 +428,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>0</NODE>
@@ -436,7 +436,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -447,9 +447,9 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7cdf</wuid>
-    <x>462</x>
+    <x>570</x>
     <y>90</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
@@ -470,7 +470,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>1</NODE>
@@ -478,7 +478,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -489,10 +489,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7cd2</wuid>
-    <x>462</x>
-    <y>180</y>
+    <x>570</x>
+    <y>198</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -512,7 +512,7 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>77</height>
+    <height>101</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <NODE>3</NODE>
@@ -520,7 +520,7 @@
     </macros>
     <name>Node $(NODE) - Channel $(N)</name>
     <opi_file>rf-leak-det-sngl-chan-tresholds.opi</opi_file>
-    <resize_behaviour>0</resize_behaviour>
+    <resize_behaviour>1</resize_behaviour>
     <rules />
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -531,10 +531,10 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wuid>-5c4fe747:15ddfee8f3c:-7cc5</wuid>
-    <x>462</x>
-    <y>360</y>
+    <x>570</x>
+    <y>414</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -564,7 +564,7 @@
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
     <scripts />
-    <text>FREIA RF leakage detectors alarms setup</text>
+    <text> Alarms setup</text>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
@@ -622,7 +622,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Text Update</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wrap_words>false</wrap_words>
     <wuid>-7685efb1:15de0252c70:-79c0</wuid>
     <x>12</x>
@@ -674,10 +674,10 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Text Update</widget_type>
-    <width>203</width>
+    <width>274</width>
     <wrap_words>false</wrap_words>
     <wuid>-7685efb1:15de0252c70:-7711</wuid>
-    <x>240</x>
+    <x>291</x>
     <y>52</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
@@ -726,10 +726,10 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Text Update</widget_type>
-    <width>203</width>
+    <width>275</width>
     <wrap_words>false</wrap_words>
     <wuid>-7685efb1:15de0252c70:-770c</wuid>
-    <x>462</x>
+    <x>570</x>
     <y>52</y>
   </widget>
 </display>

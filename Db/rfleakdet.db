@@ -39,8 +39,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK1") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK1") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK1 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "0")
@@ -63,8 +63,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG1") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG1") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG1 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "-6")
@@ -87,8 +87,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK2") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK2") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK2 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "0")
@@ -111,8 +111,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG2") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG2") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG2 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "-6")
@@ -135,8 +135,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK3") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFPEAK3") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFPEAK3 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "0")
@@ -159,8 +159,8 @@ record (subArray, "$(PREFIX):RFdet-$(NODE):tmpRFAVG3") {
 }
 record (ai, "$(PREFIX):RFdet-$(NODE):RFAVG3") {
    field(INP, "$(PREFIX):RFdet-$(NODE):tmpRFAVG3 NPP MS")
-   field (LOPR, "-30.0")
-   field (HOPR, "40.0")
+   field (LOPR, "-20.0")
+   field (HOPR, "30.0")
    field (PREC, "0")
    field (EGU, "dBm")
    field (HIGH, "-6")

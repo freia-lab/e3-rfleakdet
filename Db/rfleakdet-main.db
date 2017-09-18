@@ -27,7 +27,36 @@ record (waveform, "$(PREFIX):Config") {
   field(DTYP, "stream")
   field(NELM, "16")
   field(FTVL, "SHORT")
+  field(SCAN, "1 second")
   field(INP,"@rfleakdet.proto getConfSelf $(RFDET_PORT)")
+  field (FLNK, "$(PREFIX):Node:FAN1")
+}
+
+# Extract data from the waveform $(PREFIX):Config
+
+record (fanout, "$(PREFIX):Node:FAN1") {
+  field(DESC,"Extract all config data")
+  field(SCAN, "Passive")
+  field(SELM, "All")
+  field(LNK0,"$(PREFIX):Node:tmpsStat")
+ }
+record (subArray, "$(PREFIX):Node:tmpsStat") {
+   field (DTYP, "Soft Channel")
+   field (SCAN, "Passive")
+   field (INP, "$(PREFIX):Config")
+   field (FTVL, "USHORT")
+   field (INDX, "3")
+   field (LOPR, "0")
+   field (HOPR, "0xffff")
+   field (PREC, "0")
+   field (MALM, "15")
+   field (FLNK, "$(PREFIX):Node:sStat")
+}
+record (mbbiDirect, "$(PREFIX):Node:sStat") {
+  field(DESC,"Node's status byte")
+  field(NOBT, 8)
+  field(DTYP, "Soft Channel")
+  field(INP,"$(PREFIX):Node:tmpsStat NPP MS")
 }
 
 record (waveform, "$(PREFIX):Nodes-Conn:sIDs") {
@@ -358,7 +387,6 @@ record (mbbiDirect, "$(PREFIX):Config:sFlags") {
   field(DESC,"Configuration flags readback")
   field(NOBT, 8)
   field(DTYP, "stream")
-  field(SCAN, "1 second")
   field(INP,"@rfleakdet.proto getConfBuf(cnf) $(RFDET_PORT)")
 }
 
@@ -367,7 +395,7 @@ record (mbboDirect, "$(PREFIX):Config:cFlags") {
   field(NOBT, 8)
   field(DTYP, "stream")
   field(OUT,"@rfleakdet.proto setConfBuf(cnf) $(RFDET_PORT)")
-#  field(FLNK, "$(PREFIX):Config:sFlags")
+  field(FLNK, "$(PREFIX):Config:sFlags")
 }
 
 
@@ -473,6 +501,6 @@ record (fanout, "$(PREFIX):Config:Refresh-4") {
   field(LNK1,"$(PREFIX):Config:sCalibrFreq-1")
   field(LNK2,"$(PREFIX):Config:sCalibrFreq-2")
   field(LNK3,"$(PREFIX):Config:sCalibrFreq-3")
- # field(LNK4,"$(PREFIX):Config:sFlags")
+  field(LNK4,"$(PREFIX):Config:sFlags")
  }
 

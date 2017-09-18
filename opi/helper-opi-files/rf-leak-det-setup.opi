@@ -2445,7 +2445,7 @@ $(pv_value)</tooltip>
     <foreground_color>
       <color red="192" green="192" blue="192" />
     </foreground_color>
-    <height>164</height>
+    <height>48</height>
     <horizontal>false</horizontal>
     <label />
     <led_border>3</led_border>
@@ -2454,7 +2454,7 @@ $(pv_value)</tooltip>
     </led_border_color>
     <led_packed>false</led_packed>
     <name>Byte Monitor</name>
-    <numBits>8</numBits>
+    <numBits>2</numBits>
     <off_color>
       <color red="0" green="100" blue="0" />
     </off_color>
@@ -2471,7 +2471,7 @@ $(pv_value)</tooltip>
     </scale_options>
     <scripts />
     <square_led>false</square_led>
-    <startBit>0</startBit>
+    <startBit>3</startBit>
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
     <visible>true</visible>
@@ -2479,7 +2479,7 @@ $(pv_value)</tooltip>
     <width>20</width>
     <wuid>79c5be7d:15cc4f40ecf:-449d</wuid>
     <x>349</x>
-    <y>337</y>
+    <y>397</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -5534,101 +5534,7 @@ $(pv_value)</tooltip>
       <color red="0" green="0" blue="0" />
     </foreground_color>
     <height>20</height>
-    <label>Alarm (RO)</label>
-    <name>Check Box_3</name>
-    <pv_name>$(P):Config:cFlags.B1</pv_name>
-    <pv_value />
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>false</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <selected_color>
-      <color red="77" green="77" blue="77" />
-    </selected_color>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>Check Box</widget_type>
-    <width>175</width>
-    <wuid>-4817cad2:15cce9d9b70:-7d11</wuid>
-    <x>372</x>
-    <y>457</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.checkbox" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>0</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <label>In alarm mode</label>
-    <name>Check Box_4</name>
-    <pv_name>$(P):Config:cFlags.B2</pv_name>
-    <pv_value />
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>false</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <selected_color>
-      <color red="77" green="77" blue="77" />
-    </selected_color>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>Check Box</widget_type>
-    <width>175</width>
-    <wuid>-4817cad2:15cce9d9b70:-7d0c</wuid>
-    <x>372</x>
-    <y>437</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.checkbox" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>0</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <label>Reset Peak RF value</label>
+    <label></label>
     <name>Check Box_5</name>
     <pv_name>$(P):Config:cFlags.B3</pv_name>
     <pv_value />
@@ -5698,147 +5604,6 @@ $(pv_value)</tooltip>
     <x>372</x>
     <y>397</y>
   </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.checkbox" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>0</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <label>RS-232 (RO)</label>
-    <name>Check Box_7</name>
-    <pv_name>$(P):Config:cFlags.B5</pv_name>
-    <pv_value />
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>false</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <selected_color>
-      <color red="77" green="77" blue="77" />
-    </selected_color>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>Check Box</widget_type>
-    <width>184</width>
-    <wuid>-4817cad2:15cce9d9b70:-7cfd</wuid>
-    <x>372</x>
-    <y>377</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.checkbox" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>0</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <label>Synchronizing (RO)</label>
-    <name>Check Box_8</name>
-    <pv_name>$(P):Config:cFlags.B6</pv_name>
-    <pv_value />
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>false</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <selected_color>
-      <color red="77" green="77" blue="77" />
-    </selected_color>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>Check Box</widget_type>
-    <width>191</width>
-    <wuid>-4817cad2:15cce9d9b70:-7cf8</wuid>
-    <x>372</x>
-    <y>357</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.checkbox" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>0</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <label>n.u.</label>
-    <name>Check Box_9</name>
-    <pv_name>$(P):Config:cFlags.B7</pv_name>
-    <pv_value />
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>false</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <selected_color>
-      <color red="77" green="77" blue="77" />
-    </selected_color>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>Check Box</widget_type>
-    <width>100</width>
-    <wuid>-4817cad2:15cce9d9b70:-7cf3</wuid>
-    <x>372</x>
-    <y>337</y>
-  </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
     <actions hook="false" hook_all="true">
       <action type="OPEN_DISPLAY">
@@ -5894,5 +5659,106 @@ $(pv_value)</tooltip>
     <wuid>-7685efb1:15de0252c70:-73e9</wuid>
     <x>727</x>
     <y>516</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>61</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_6</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Reset Peak RF value
+each time current data
+has been transmitted</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>158</width>
+    <wrap_words>false</wrap_words>
+    <wuid>5e783165:15e953d486b:-7d9b</wuid>
+    <x>389</x>
+    <y>418</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.bytemonitor" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <bitReverse>false</bitReverse>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <effect_3d>true</effect_3d>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <height>24</height>
+    <horizontal>false</horizontal>
+    <label />
+    <led_border>3</led_border>
+    <led_border_color>
+      <color red="150" green="150" blue="150" />
+    </led_border_color>
+    <led_packed>false</led_packed>
+    <name>Byte Monitor_1</name>
+    <numBits>1</numBits>
+    <off_color>
+      <color red="0" green="100" blue="0" />
+    </off_color>
+    <on_color>
+      <color red="0" green="255" blue="0" />
+    </on_color>
+    <pv_name>$(P):Config:sFlags</pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <square_led>false</square_led>
+    <startBit>0</startBit>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Byte Monitor</widget_type>
+    <width>20</width>
+    <wuid>5e783165:15e953d486b:-7d8f</wuid>
+    <x>349</x>
+    <y>475</y>
   </widget>
 </display>
