@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_visible>false</grid_visible>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>FREIA RF Leakage detectors</text>
+    <x>12</x>
+    <width>784</width>
+    <height>47</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P):Config:sCalibrFreq-1</pv_name>
+    <x>12</x>
+    <y>52</y>
+    <width>203</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="188" green="188" blue="188">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P):Config:sCalibrFreq-2</pv_name>
+    <x>240</x>
+    <y>52</y>
+    <width>203</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="188" green="188" blue="188">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P):Config:sCalibrFreq-3</pv_name>
+    <x>462</x>
+    <y>52</y>
+    <width>203</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="188" green="188" blue="188">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <file>rf-leak-det-sngl-alrm.opi</file>
+    <macros>
+      <NODE>1</NODE>
+    </macros>
+    <x>672</x>
+    <y>206</y>
+    <width>120</width>
+    <height>51</height>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <file>rf-leak-det-sngl-alrm.opi</file>
+    <macros>
+      <NODE>0</NODE>
+    </macros>
+    <x>672</x>
+    <y>116</y>
+    <width>120</width>
+    <height>51</height>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <file>rf-leak-det-sngl-alrm.opi</file>
+    <macros>
+      <NODE>2</NODE>
+    </macros>
+    <x>672</x>
+    <y>296</y>
+    <width>120</width>
+    <height>51</height>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <file>rf-leak-det-sngl-alrm.opi</file>
+    <macros>
+      <NODE>3</NODE>
+    </macros>
+    <x>672</x>
+    <y>386</y>
+    <width>120</width>
+    <height>51</height>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor</name>
+    <pv_name>$(P):Node:sStat</pv_name>
+    <x>18</x>
+    <y>450</y>
+    <width>20</width>
+    <height>140</height>
+    <numBits>7</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Synchronizing slaves
+Using RS-232 port
+Resetting alarms
+Keep updating peak value
+In alarm state
+Master mode
+All nodes allowed</text>
+    <x>48</x>
+    <y>446</y>
+    <width>174</width>
+    <height>147</height>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 0 - Channel 1</name>
+    <x>12</x>
+    <y>90</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 0 - Channel 1_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>1</N>
+        <NODE>0</NODE>
+      </macros>
+      <width>201</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 1 - Channel 1</name>
+    <x>12</x>
+    <y>180</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 1 - Channel 1_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>1</N>
+        <NODE>1</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 2 - Channel 1</name>
+    <x>12</x>
+    <y>270</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 2 - Channel 1_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>1</N>
+        <NODE>2</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 3 - Channel 1</name>
+    <x>12</x>
+    <y>360</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 3 - Channel 1_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>1</N>
+        <NODE>3</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 2 - Channel 2</name>
+    <x>240</x>
+    <y>270</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 2 - Channel 2_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>2</N>
+        <NODE>2</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 0 - Channel 2</name>
+    <x>240</x>
+    <y>90</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 0 - Channel 2_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>2</N>
+        <NODE>0</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 1 - Channel 2</name>
+    <x>240</x>
+    <y>180</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 1 - Channel 2_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>2</N>
+        <NODE>1</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 3 - Channel 2</name>
+    <x>240</x>
+    <y>360</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 3 - Channel 2_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>2</N>
+        <NODE>3</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 2 - Channel 3</name>
+    <x>462</x>
+    <y>270</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 2 - Channel 3_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>3</N>
+        <NODE>2</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 0 - Channel 3</name>
+    <x>462</x>
+    <y>90</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 0 - Channel 3_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>3</N>
+        <NODE>0</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 1 - Channel 3</name>
+    <x>462</x>
+    <y>180</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 1 - Channel 3_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>3</N>
+        <NODE>1</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Node 3 - Channel 3</name>
+    <x>462</x>
+    <y>360</y>
+    <width>203</width>
+    <height>77</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Node 3 - Channel 3_Content</name>
+      <file>rf-leak-det-sngl-chan.opi</file>
+      <macros>
+        <N>3</N>
+        <NODE>3</NODE>
+      </macros>
+      <width>200</width>
+      <height>52</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+</display>
