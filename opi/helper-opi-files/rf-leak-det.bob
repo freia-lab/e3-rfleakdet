@@ -127,10 +127,10 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container</name>
-    <file>rf-leak-det-sngl-alrm.opi</file>
     <macros>
       <NODE>1</NODE>
     </macros>
+    <file>rf-leak-det-sngl-alrm.opi</file>
     <x>672</x>
     <y>206</y>
     <width>120</width>
@@ -144,10 +144,10 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_1</name>
-    <file>rf-leak-det-sngl-alrm.opi</file>
     <macros>
       <NODE>0</NODE>
     </macros>
+    <file>rf-leak-det-sngl-alrm.opi</file>
     <x>672</x>
     <y>116</y>
     <width>120</width>
@@ -161,10 +161,10 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_2</name>
-    <file>rf-leak-det-sngl-alrm.opi</file>
     <macros>
       <NODE>2</NODE>
     </macros>
+    <file>rf-leak-det-sngl-alrm.opi</file>
     <x>672</x>
     <y>296</y>
     <width>120</width>
@@ -178,10 +178,10 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_3</name>
-    <file>rf-leak-det-sngl-alrm.opi</file>
     <macros>
       <NODE>3</NODE>
     </macros>
+    <file>rf-leak-det-sngl-alrm.opi</file>
     <x>672</x>
     <y>386</y>
     <width>120</width>
@@ -227,9 +227,9 @@ In alarm state
 Master mode
 All nodes allowed</text>
     <x>48</x>
-    <y>446</y>
+    <y>441</y>
     <width>174</width>
-    <height>147</height>
+    <height>159</height>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
       </color>
@@ -267,11 +267,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 0 - Channel 1_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>1</N>
         <NODE>0</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>201</width>
       <height>52</height>
       <actions>
@@ -300,11 +300,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 1 - Channel 1_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>1</N>
         <NODE>1</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -333,11 +333,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 2 - Channel 1_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>1</N>
         <NODE>2</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -366,11 +366,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 3 - Channel 1_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>1</N>
         <NODE>3</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -399,11 +399,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 2 - Channel 2_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>2</N>
         <NODE>2</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -432,11 +432,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 0 - Channel 2_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>2</N>
         <NODE>0</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -465,11 +465,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 1 - Channel 2_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>2</N>
         <NODE>1</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -498,11 +498,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 3 - Channel 2_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>2</N>
         <NODE>3</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -531,11 +531,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 2 - Channel 3_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>3</N>
         <NODE>2</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -564,11 +564,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 0 - Channel 3_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>3</N>
         <NODE>0</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -597,11 +597,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 1 - Channel 3_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>3</N>
         <NODE>1</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
@@ -630,11 +630,11 @@ All nodes allowed</text>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
       <name>Node 3 - Channel 3_Content</name>
-      <file>rf-leak-det-sngl-chan.opi</file>
       <macros>
         <N>3</N>
         <NODE>3</NODE>
       </macros>
+      <file>rf-leak-det-sngl-chan.opi</file>
       <width>200</width>
       <height>52</height>
       <actions>
