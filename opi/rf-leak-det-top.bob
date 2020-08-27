@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <name>RF Leak Detector</name>
   <macros>
     <P>Env-RFleakage</P>
   </macros>
@@ -71,7 +72,6 @@
             <file>helper-opi-files/rf-leak-det-setup.opi</file>
             <width>864</width>
             <height>701</height>
-            <resize>1</resize>
             <actions>
             </actions>
             <border_color>
@@ -98,6 +98,17 @@
           </widget>
         </children>
       </tab>
+      <tab>
+        <name>Debug</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display</name>
+            <file>helper-opi-files/rf-leak-det-debug.bob</file>
+            <width>858</width>
+            <height>670</height>
+          </widget>
+        </children>
+      </tab>
     </tabs>
     <y>60</y>
     <width>871</width>
@@ -106,6 +117,7 @@
       <color red="240" green="240" blue="240">
       </color>
     </background_color>
+    <active_tab>1</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>

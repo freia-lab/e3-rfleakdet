@@ -12,29 +12,6 @@
   <actions>
   </actions>
   <grid_visible>false</grid_visible>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Input</name>
-    <pv_name>$(P):debug</pv_name>
-    <x>12</x>
-    <y>61</y>
-    <width>385</width>
-    <height>25</height>
-    <foreground_color>
-      <color name="BLACK" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color name="WHITE" red="255" green="255" blue="255">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <text>RF Leakage Detector Setup &amp; Test</text>
@@ -64,298 +41,11 @@
       </color>
     </border_color>
   </widget>
-  <widget type="group" version="2.0.0">
-    <name>$(P):$(S)</name>
-    <macros>
-      <S>RFdata</S>
-    </macros>
-    <x>9</x>
-    <y>96</y>
-    <width>279</width>
-    <height>98</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="array" version="2.0.0">
-      <name>Array</name>
-      <pv_name>$(P):$(S)</pv_name>
-      <x>156</x>
-      <y>7</y>
-      <width>120</width>
-      <height>60</height>
-      <foreground_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="240" green="240" blue="240">
-        </color>
-      </background_color>
-      <actions>
-      </actions>
-      <widget type="label" version="2.0.0">
-        <name>Array-label-1</name>
-        <text></text>
-        <foreground_color>
-          <color name="BLACK" red="0" green="0" blue="0">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="WHITE" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>false</transparent>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-        <actions>
-        </actions>
-        <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-        <border_color>
-          <color red="0" green="128" blue="255">
-          </color>
-        </border_color>
-      </widget>
-    </widget>
-    <widget type="checkbox" version="2.0.0">
-      <name>Check Box</name>
-      <pv_name>$(P):$(S).DISA</pv_name>
-      <label>Disabled</label>
-      <x>3</x>
-      <y>7</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <actions>
-      </actions>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):$(S).SEVR</pv_name>
-      <x>3</x>
-      <y>30</y>
-      <width>85</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P):$(S).STAT</pv_name>
-      <x>3</x>
-      <y>49</y>
-      <width>85</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):$(S).NORD</pv_name>
-      <x>120</x>
-      <y>11</y>
-      <width>25</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>$(P):$(D)</name>
-    <macros>
-      <D>Config</D>
-    </macros>
-    <x>300</x>
-    <y>96</y>
-    <width>279</width>
-    <height>98</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="array" version="2.0.0">
-      <name>Array</name>
-      <pv_name>$(P):$(D)</pv_name>
-      <x>150</x>
-      <y>6</y>
-      <width>126</width>
-      <height>60</height>
-      <foreground_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="240" green="240" blue="240">
-        </color>
-      </background_color>
-      <actions>
-      </actions>
-      <widget type="label" version="2.0.0">
-        <name>Array-label-1</name>
-        <text></text>
-        <width>106</width>
-        <foreground_color>
-          <color name="BLACK" red="0" green="0" blue="0">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="WHITE" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>false</transparent>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-        <actions>
-        </actions>
-        <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-        <border_color>
-          <color red="0" green="128" blue="255">
-          </color>
-        </border_color>
-      </widget>
-    </widget>
-    <widget type="checkbox" version="2.0.0">
-      <name>Check Box</name>
-      <pv_name>$(P):$(D).DISA</pv_name>
-      <label>Disabled</label>
-      <x>3</x>
-      <y>6</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <actions>
-      </actions>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):$(D).SEVR</pv_name>
-      <x>3</x>
-      <y>29</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P):$(D).STAT</pv_name>
-      <x>3</x>
-      <y>48</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):$(D).NORD</pv_name>
-      <x>120</x>
-      <y>10</y>
-      <width>22</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-  </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
     <pv_name>$(P):Mode:sMaster</pv_name>
-    <x>409</x>
-    <y>66</y>
+    <x>40</x>
+    <y>93</y>
     <width>16</width>
     <height>16</height>
     <off_color>
@@ -381,8 +71,8 @@ $(pv_value)</tooltip>
     <name>Check Box</name>
     <pv_name>$(P):Mode:cmdMaster</pv_name>
     <label>Master</label>
-    <x>426</x>
-    <y>64</y>
+    <x>57</x>
+    <y>91</y>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
       </color>
@@ -393,8 +83,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
     <text>Node ID:</text>
-    <x>683</x>
-    <y>64</y>
+    <x>314</x>
+    <y>91</y>
     <width>80</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -417,8 +107,8 @@ $(pv_value)</tooltip>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_1</name>
     <pv_name>$(P):Node:cId</pv_name>
-    <x>767</x>
-    <y>61</y>
+    <x>398</x>
+    <y>88</y>
     <width>47</width>
     <height>25</height>
     <foreground_color>
@@ -440,8 +130,8 @@ $(pv_value)</tooltip>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P):Node:sId</pv_name>
-    <x>827</x>
-    <y>64</y>
+    <x>458</x>
+    <y>91</y>
     <width>43</width>
     <foreground_color>
       <color red="0" green="0" blue="0">
@@ -463,8 +153,8 @@ $(pv_value)</tooltip>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>$(P):Master:sN-conn</pv_name>
-    <x>629</x>
-    <y>64</y>
+    <x>260</x>
+    <y>91</y>
     <width>42</width>
     <foreground_color>
       <color red="0" green="0" blue="0">
@@ -486,8 +176,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>Conn. slaves:</text>
-    <x>533</x>
-    <y>64</y>
+    <x>164</x>
+    <y>91</y>
     <width>92</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -507,322 +197,12 @@ $(pv_value)</tooltip>
       </color>
     </border_color>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>$(P):debug-in</pv_name>
-    <x>9</x>
-    <y>672</y>
-    <width>861</width>
-    <height>43</height>
-    <foreground_color>
-      <color name="BLACK" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color name="WHITE" red="255" green="255" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <vertical_alignment>1</vertical_alignment>
-    <actions>
-    </actions>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>$(P):$(D)</name>
-    <macros>
-      <D>Nodes-sAllowed:sIDs</D>
-    </macros>
-    <x>583</x>
-    <y>214</y>
-    <width>279</width>
-    <height>98</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="array" version="2.0.0">
-      <name>Array</name>
-      <pv_name>$(P):$(D)</pv_name>
-      <x>150</x>
-      <y>3</y>
-      <width>126</width>
-      <height>60</height>
-      <foreground_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="240" green="240" blue="240">
-        </color>
-      </background_color>
-      <actions>
-      </actions>
-      <widget type="label" version="2.0.0">
-        <name>Text Update</name>
-        <text>######</text>
-        <width>106</width>
-        <foreground_color>
-          <color name="BLACK" red="0" green="0" blue="0">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="WHITE" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>false</transparent>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-        <actions>
-        </actions>
-        <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-        <border_color>
-          <color red="0" green="128" blue="255">
-          </color>
-        </border_color>
-      </widget>
-    </widget>
-    <widget type="checkbox" version="2.0.0">
-      <name>Check Box</name>
-      <pv_name>$(P):$(D).DISA</pv_name>
-      <label>Disabled</label>
-      <x>5</x>
-      <y>7</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <actions>
-      </actions>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):$(D).SEVR</pv_name>
-      <x>5</x>
-      <y>30</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P):$(D).STAT</pv_name>
-      <x>5</x>
-      <y>49</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):$(D).NORD</pv_name>
-      <x>125</x>
-      <y>11</y>
-      <width>22</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>$(P):$(D)</name>
-    <macros>
-      <D>Nodes-Conn:sIDs</D>
-    </macros>
-    <x>583</x>
-    <y>96</y>
-    <width>279</width>
-    <height>98</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="array" version="2.0.0">
-      <name>Array</name>
-      <pv_name>$(P):$(D)</pv_name>
-      <x>150</x>
-      <y>6</y>
-      <width>126</width>
-      <height>60</height>
-      <foreground_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="240" green="240" blue="240">
-        </color>
-      </background_color>
-      <actions>
-      </actions>
-      <widget type="label" version="2.0.0">
-        <name>Array-label-1</name>
-        <text>######</text>
-        <width>106</width>
-        <foreground_color>
-          <color name="BLACK" red="0" green="0" blue="0">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="WHITE" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>false</transparent>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-        <actions>
-        </actions>
-        <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-        <border_color>
-          <color red="0" green="128" blue="255">
-          </color>
-        </border_color>
-      </widget>
-    </widget>
-    <widget type="checkbox" version="2.0.0">
-      <name>Check Box</name>
-      <pv_name>$(P):$(D).DISA</pv_name>
-      <label>Disabled</label>
-      <x>4</x>
-      <y>6</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <actions>
-      </actions>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):$(D).SEVR</pv_name>
-      <x>4</x>
-      <y>29</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P):$(D).STAT</pv_name>
-      <x>4</x>
-      <y>48</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):$(D).NORD</pv_name>
-      <x>120</x>
-      <y>10</y>
-      <width>22</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-  </widget>
   <widget type="checkbox" version="2.0.0">
     <name>Check Box_1</name>
     <pv_name>$(P):Master:cmdAllowAll</pv_name>
     <label>Allow All Nodes</label>
-    <x>388</x>
-    <y>234</y>
+    <x>386</x>
+    <y>140</y>
     <width>175</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -841,8 +221,8 @@ $(pv_value)</tooltip>
     </actions>
     <pv_name>$(P):Config:Apply</pv_name>
     <text>Apply Configuration</text>
-    <x>12</x>
-    <y>618</y>
+    <x>10</x>
+    <y>524</y>
     <width>189</width>
     <height>25</height>
     <foreground_color>
@@ -860,8 +240,8 @@ $(pv_value)</tooltip>
     </actions>
     <pv_name>$(P):Config:Reboot</pv_name>
     <text>Reboot Node</text>
-    <x>678</x>
-    <y>317</y>
+    <x>640</x>
+    <y>290</y>
     <width>189</width>
     <height>25</height>
     <foreground_color>
@@ -883,8 +263,8 @@ $(pv_value)</tooltip>
     </actions>
     <pv_name>$(P):Config:Reset</pv_name>
     <text>Reset Alarms &amp; Data</text>
-    <x>678</x>
-    <y>347</y>
+    <x>640</x>
+    <y>320</y>
     <width>189</width>
     <height>25</height>
     <foreground_color>
@@ -906,8 +286,8 @@ $(pv_value)</tooltip>
     </actions>
     <pv_name>$(P):Config:RstNet</pv_name>
     <text>Reset Network</text>
-    <x>678</x>
-    <y>377</y>
+    <x>640</x>
+    <y>350</y>
     <width>189</width>
     <height>25</height>
     <foreground_color>
@@ -931,8 +311,8 @@ $(pv_value)</tooltip>
     </actions>
     <pv_name>$(P):Config:SavInFlash</pv_name>
     <text>Save Config in Flash</text>
-    <x>367</x>
-    <y>618</y>
+    <x>365</x>
+    <y>524</y>
     <width>189</width>
     <height>25</height>
     <foreground_color>
@@ -943,8 +323,8 @@ $(pv_value)</tooltip>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_2</name>
     <pv_name>$(P):Config:AddAllowedId</pv_name>
-    <x>525</x>
-    <y>258</y>
+    <x>523</x>
+    <y>164</y>
     <width>40</width>
     <height>25</height>
     <foreground_color>
@@ -966,8 +346,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Add Node:</text>
-    <x>393</x>
-    <y>258</y>
+    <x>391</x>
+    <y>164</y>
     <width>118</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -990,8 +370,8 @@ $(pv_value)</tooltip>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_3</name>
     <pv_name>$(P):Config:RmAllowedId</pv_name>
-    <x>525</x>
-    <y>285</y>
+    <x>523</x>
+    <y>191</y>
     <width>40</width>
     <height>25</height>
     <foreground_color>
@@ -1013,8 +393,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>Remove Node:</text>
-    <x>393</x>
-    <y>285</y>
+    <x>391</x>
+    <y>191</y>
     <width>118</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -1037,8 +417,8 @@ $(pv_value)</tooltip>
   <widget type="byte_monitor" version="2.0.0">
     <name>Byte Monitor</name>
     <pv_name>$(P):Config:sFlags</pv_name>
-    <x>349</x>
-    <y>395</y>
+    <x>347</x>
+    <y>301</y>
     <width>20</width>
     <height>48</height>
     <startBit>3</startBit>
@@ -1064,8 +444,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>1</N>
     </macros>
-    <x>13</x>
-    <y>311</y>
+    <x>11</x>
+    <y>217</y>
     <width>327</width>
     <height>87</height>
     <style>3</style>
@@ -1292,8 +672,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>2</N>
     </macros>
-    <x>13</x>
-    <y>414</y>
+    <x>11</x>
+    <y>320</y>
     <width>327</width>
     <height>87</height>
     <style>3</style>
@@ -1521,8 +901,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>3</N>
     </macros>
-    <x>13</x>
-    <y>516</y>
+    <x>11</x>
+    <y>422</y>
     <width>327</width>
     <height>87</height>
     <style>3</style>
@@ -1750,8 +1130,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>1</N>
     </macros>
-    <x>368</x>
-    <y>516</y>
+    <x>366</x>
+    <y>422</y>
     <width>326</width>
     <height>26</height>
     <style>3</style>
@@ -1838,8 +1218,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>2</N>
     </macros>
-    <x>367</x>
-    <y>547</y>
+    <x>365</x>
+    <y>453</y>
     <width>326</width>
     <height>26</height>
     <style>3</style>
@@ -1926,8 +1306,8 @@ $(pv_value)</tooltip>
     <macros>
       <N>3</N>
     </macros>
-    <x>367</x>
-    <y>577</y>
+    <x>365</x>
+    <y>483</y>
     <width>326</width>
     <height>26</height>
     <style>3</style>
@@ -2012,8 +1392,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
     <text>Node Adr:</text>
-    <x>683</x>
-    <y>36</y>
+    <x>314</x>
+    <y>63</y>
     <width>80</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -2036,8 +1416,8 @@ $(pv_value)</tooltip>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_4</name>
     <pv_name>$(P):Node:cAdr</pv_name>
-    <x>767</x>
-    <y>33</y>
+    <x>398</x>
+    <y>60</y>
     <width>47</width>
     <height>25</height>
     <foreground_color>
@@ -2059,8 +1439,8 @@ $(pv_value)</tooltip>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P):Node:sAdr</pv_name>
-    <x>827</x>
-    <y>36</y>
+    <x>458</x>
+    <y>63</y>
     <width>43</width>
     <foreground_color>
       <color red="0" green="0" blue="0">
@@ -2081,8 +1461,8 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_6</name>
-    <x>14</x>
-    <y>239</y>
+    <x>12</x>
+    <y>145</y>
     <width>326</width>
     <height>26</height>
     <style>3</style>
@@ -2166,8 +1546,8 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_7</name>
-    <x>14</x>
-    <y>270</y>
+    <x>12</x>
+    <y>176</y>
     <width>326</width>
     <height>26</height>
     <style>3</style>
@@ -2258,8 +1638,8 @@ $(pv_value)</tooltip>
       </action>
     </actions>
     <text>Refresh</text>
-    <x>740</x>
-    <y>611</y>
+    <x>710</x>
+    <y>510</y>
     <width>122</width>
     <height>40</height>
     <font>
@@ -2274,156 +1654,12 @@ $(pv_value)</tooltip>
 read-back values
 </tooltip>
   </widget>
-  <widget type="group" version="2.0.0">
-    <name>$(P):$(S)-$(NODE)</name>
-    <macros>
-      <S>RFdet</S>
-    </macros>
-    <x>583</x>
-    <y>409</y>
-    <width>279</width>
-    <height>98</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="array" version="2.0.0">
-      <name>Array</name>
-      <pv_name>$(P):$(S)-$(NODE)</pv_name>
-      <x>156</x>
-      <y>6</y>
-      <width>120</width>
-      <height>60</height>
-      <foreground_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="240" green="240" blue="240">
-        </color>
-      </background_color>
-      <actions>
-      </actions>
-      <widget type="label" version="2.0.0">
-        <name>Text Update</name>
-        <text>######</text>
-        <foreground_color>
-          <color name="BLACK" red="0" green="0" blue="0">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="WHITE" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>false</transparent>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-        <actions>
-        </actions>
-        <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-        <border_color>
-          <color red="0" green="128" blue="255">
-          </color>
-        </border_color>
-      </widget>
-    </widget>
-    <widget type="checkbox" version="2.0.0">
-      <name>Check Box</name>
-      <pv_name>$(P):$(S)-$(NODE).DISA</pv_name>
-      <label>Disabled</label>
-      <x>5</x>
-      <y>6</y>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <actions>
-      </actions>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):$(S)-$(NODE).SEVR</pv_name>
-      <x>5</x>
-      <y>29</y>
-      <width>85</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P):$(S)-$(NODE).STAT</pv_name>
-      <x>5</x>
-      <y>48</y>
-      <width>85</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):$(S)-$(NODE).NORD</pv_name>
-      <x>120</x>
-      <y>10</y>
-      <width>25</width>
-      <foreground_color>
-        <color name="BLACK" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="WHITE" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-  </widget>
   <widget type="checkbox" version="2.0.0">
     <name>Check Box_2</name>
     <pv_name>$(P):Config:cFlags.B0</pv_name>
     <label>All nodes allowed</label>
-    <x>380</x>
-    <y>486</y>
+    <x>378</x>
+    <y>392</y>
     <width>175</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -2436,8 +1672,8 @@ $(pv_value)</tooltip>
     <name>Check Box_5</name>
     <pv_name>$(P):Config:cFlags.B3</pv_name>
     <label></label>
-    <x>380</x>
-    <y>422</y>
+    <x>378</x>
+    <y>328</y>
     <width>184</width>
     <foreground_color>
       <color red="0" green="0" blue="0">
@@ -2450,8 +1686,8 @@ $(pv_value)</tooltip>
     <name>Check Box_6</name>
     <pv_name>$(P):Config:cFlags.B4</pv_name>
     <label>Reset Alarm state</label>
-    <x>380</x>
-    <y>396</y>
+    <x>378</x>
+    <y>302</y>
     <width>191</width>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
@@ -2460,35 +1696,13 @@ $(pv_value)</tooltip>
     <actions>
     </actions>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_5</name>
-    <actions execute_as_one="true">
-      <action type="open_display">
-        <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
-        <macros>
-          <R>:asynRec</R>
-        </macros>
-        <target>standalone</target>
-      </action>
-    </actions>
-    <text>asynRec</text>
-    <x>727</x>
-    <y>516</y>
-    <width>135</width>
-    <height>40</height>
-    <foreground_color>
-      <color name="BLACK" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
     <text>Reset Peak RF value
 each time current data
 has been transmitted</text>
-    <x>408</x>
-    <y>421</y>
+    <x>406</x>
+    <y>327</y>
     <width>158</width>
     <height>61</height>
     <foreground_color>
@@ -2511,8 +1725,8 @@ has been transmitted</text>
   <widget type="byte_monitor" version="2.0.0">
     <name>Byte Monitor_1</name>
     <pv_name>$(P):Config:sFlags</pv_name>
-    <x>349</x>
-    <y>483</y>
+    <x>347</x>
+    <y>389</y>
     <width>20</width>
     <height>24</height>
     <numBits>1</numBits>
