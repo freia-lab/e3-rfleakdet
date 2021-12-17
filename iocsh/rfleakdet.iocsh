@@ -1,0 +1,9 @@
+# This should be the included snippet to configure and run the deployed IOC. It should be loaded with
+#
+#   iocshLoad("$(rfleakdet_DIR)/rfleakdet.iocsh", "ASYN_PORT_NAME=<asyn_port>")
+
+epicsEnvSet("STREAM_PROTOCOL_PATH","$(rfleakdet_DB)")
+epicsEnvSet("RFLEAK_PORT", "$(ASYN_PORT_NAME=RFLEAKDET)")
+
+drvAsynIPPortConfigure(${RFLEAK_PORT}, "192.168.10.9:4002",0,0,0)
+

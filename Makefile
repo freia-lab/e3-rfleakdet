@@ -1,13 +1,19 @@
-EXCLUDE_VERSIONS = 3.14
+# Copyright (C) 2021  FREIA Laboratory
 
-EXCLUDE_ARCHS += eldk
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 
-include $(EPICS_ENV_PATH)/module.Makefile
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 
-#USR_DEPENDENCIES += autosave
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-MISCS = $(AUTOMISCS)
-MISCS += misc/rfleakdet-freia.req
 
-OPIS = opi
-#MISCS += misc/ioc-superv-freia.req
+TOP := $(CURDIR)
+include $(TOP)/configure/CONFIG
+include $(TOP)/configure/RULES
