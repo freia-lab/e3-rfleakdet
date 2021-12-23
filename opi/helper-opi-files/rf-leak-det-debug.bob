@@ -720,9 +720,10 @@ read-back values
       <action type="open_display">
         <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
         <macros>
+          <P>ioc10-rfleak</P>
           <R>:asynRec</R>
         </macros>
-        <target>standalone</target>
+        <target>window</target>
       </action>
     </actions>
     <text>asynRec</text>
