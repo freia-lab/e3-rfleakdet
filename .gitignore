@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 rfleakdet/*.Makefile
+rfleakdet/O.*
 cellMods/
 testMods*/
 *PVs.list
